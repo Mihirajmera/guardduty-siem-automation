@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "React dashboard for GuardDuty security findings",
   "private": true,
+  "homepage": "https://mihirajmera.github.io/guardduty-siem-automation",
   "dependencies": {
     "@aws-amplify/ui-react": "^5.0.0",
     "@aws-sdk/client-cloudwatch-logs": "^3.0.0",
