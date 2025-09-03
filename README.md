@@ -314,9 +314,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 👨‍💻 Author
 
 **Mihir** - *Security Engineer*
-- LinkedIn: [Your LinkedIn Profile]
+- LinkedIn: [Mihir Ajmera](https://www.linkedin.com/in/mihirajmera-)
 - GitHub: [Mihirajmera](https://github.com/Mihirajmera)
-- Email: 89500809+Mihirajmera@users.noreply.github.com
+- Email: ajmera.mihir.79@gmail.com
 
 ---
 
