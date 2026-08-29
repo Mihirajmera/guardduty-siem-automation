@@ -135,6 +135,14 @@ aws lambda list-functions
 terraform destroy -auto-approve
 ```
 
+## 🤖 CI/CD Pipeline
+
+This project includes a unified GitHub Actions CI workflow (`.github/workflows/ci.yml`) that automatically runs on pushes and pull requests to `master` or `main`.
+
+The pipeline consists of two parallel jobs:
+- **Infrastructure Checks**: Formats (`terraform fmt -check`), validates (`terraform validate`), and scans the Terraform files for security misconfigurations using Aqua Security's **Trivy** scan.
+- **React Dashboard Build**: Installs node modules and runs a compilation build check (`npm run build`) to ensure the frontend is always compilable.
+
 ## 💰 Cost Analysis
 
 | Resource | Monthly Cost | Purpose |
@@ -180,6 +188,8 @@ quarantine_security_group_id = "sg-xxxxxxxxx"
 
 ```
 guardduty-siem/
+├── .github/workflows/
+│   └── ci.yml                  # GitHub Actions CI workflow
 ├── versions.tf                 # Terraform and provider versions
 ├── providers.tf                # AWS provider configuration
 ├── variables.tf                # Input variables
