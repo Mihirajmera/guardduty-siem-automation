@@ -1,11 +1,11 @@
 # Lambda function for logging all GuardDuty findings
 resource "aws_lambda_function" "finding_logger" {
-  filename         = "finding_logger.zip"
-  function_name    = "${local.project_name}-finding-logger"
-  role            = aws_iam_role.lambda_security_role.arn
-  handler         = "index.handler"
-  runtime         = "python3.9"
-  timeout         = 60
+  filename      = "finding_logger.zip"
+  function_name = "${local.project_name}-finding-logger"
+  role          = aws_iam_role.lambda_security_role.arn
+  handler       = "index.handler"
+  runtime       = "python3.9"
+  timeout       = 60
 
   environment {
     variables = {
@@ -21,7 +21,7 @@ data "archive_file" "finding_logger_zip" {
   type        = "zip"
   output_path = "finding_logger.zip"
   source {
-    content = <<EOF
+    content  = <<EOF
 import json
 import boto3
 import logging

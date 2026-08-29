@@ -1,15 +1,15 @@
 # Lambda function for auto-quarantine
 resource "aws_lambda_function" "auto_quarantine" {
-  filename         = "auto_quarantine.zip"
-  function_name    = "${local.project_name}-auto-quarantine"
-  role            = aws_iam_role.lambda_security_role.arn
-  handler         = "index.handler"
-  runtime         = "python3.9"
-  timeout         = 300
+  filename      = "auto_quarantine.zip"
+  function_name = "${local.project_name}-auto-quarantine"
+  role          = aws_iam_role.lambda_security_role.arn
+  handler       = "index.handler"
+  runtime       = "python3.9"
+  timeout       = 300
 
   environment {
     variables = {
-      SNS_TOPIC_ARN = aws_sns_topic.security_alerts.arn
+      SNS_TOPIC_ARN      = aws_sns_topic.security_alerts.arn
       SEVERITY_THRESHOLD = var.quarantine_severity_threshold
     }
   }
@@ -22,7 +22,7 @@ data "archive_file" "auto_quarantine_zip" {
   type        = "zip"
   output_path = "auto_quarantine.zip"
   source {
-    content = <<EOF
+    content  = <<EOF
 import json
 import boto3
 import logging

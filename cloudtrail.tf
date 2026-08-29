@@ -89,8 +89,8 @@ resource "aws_cloudtrail" "main" {
   enable_logging                = true
 
   event_selector {
-    read_write_type                 = "All"
-    include_management_events       = true
+    read_write_type           = "All"
+    include_management_events = true
     data_resource {
       type   = "AWS::S3::Object"
       values = ["arn:aws:s3:::"]
@@ -98,8 +98,8 @@ resource "aws_cloudtrail" "main" {
   }
 
   event_selector {
-    read_write_type                 = "All"
-    include_management_events       = true
+    read_write_type           = "All"
+    include_management_events = true
     data_resource {
       type   = "AWS::Lambda::Function"
       values = ["arn:aws:lambda"]

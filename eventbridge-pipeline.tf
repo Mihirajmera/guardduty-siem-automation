@@ -8,7 +8,7 @@ resource "aws_cloudwatch_event_rule" "guardduty_findings" {
     detail-type = ["GuardDuty Finding"]
     detail = {
       severity = [
-        { numeric = [">=", 7.0] }  # HIGH and CRITICAL findings
+        { numeric = [">=", 7.0] } # HIGH and CRITICAL findings
       ]
     }
   })
