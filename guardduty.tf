@@ -23,21 +23,11 @@ resource "aws_guardduty_detector" "main" {
   tags = local.tags
 }
 
-# GuardDuty Finding Publishing Frequency
-resource "aws_guardduty_detector_feature" "malware_protection" {
+# GuardDuty EBS Malware Protection
+resource "aws_guardduty_detector_feature" "ebs_malware_protection" {
   detector_id = aws_guardduty_detector.main.id
-  name        = "MALWARE_PROTECTION"
+  name        = "EBS_MALWARE_PROTECTION"
   status      = "ENABLED"
-}
-
-resource "aws_guardduty_detector_feature" "malware_protection_scan_ec2" {
-  detector_id = aws_guardduty_detector.main.id
-  name        = "MALWARE_PROTECTION_SCAN_EC2_INSTANCE_WITH_FINDINGS"
-  status      = "ENABLED"
-  additional_configuration {
-    name   = "EBS_MALWARE_PROTECTION"
-    status = "ENABLED"
-  }
 }
 
 # GuardDuty Threat Intel Set (example)
