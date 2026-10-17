@@ -1,6 +1,13 @@
 # 🛡️ GuardDuty SIEM & Incident Response Automation
 
+[![CI](https://github.com/Mihirajmera/guardduty-siem-automation/actions/workflows/ci.yml/badge.svg)](https://github.com/Mihirajmera/guardduty-siem-automation/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/Mihirajmera/guardduty-siem-automation/actions/workflows/codeql.yml/badge.svg)](https://github.com/Mihirajmera/guardduty-siem-automation/actions/workflows/codeql.yml)
+[![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/Mihirajmera/guardduty-siem-automation/badge)](https://scorecard.dev/viewer/?uri=github.com/Mihirajmera/guardduty-siem-automation)
+[![Release](https://img.shields.io/github/v/release/Mihirajmera/guardduty-siem-automation?color=0891b2)](https://github.com/Mihirajmera/guardduty-siem-automation/releases)
+
 Enterprise-grade Security Information and Event Management (SIEM) with automated incident response, threat detection, and real-time security monitoring
+
+**[Live demo of the findings dashboard](https://mihirajmera.github.io/guardduty-siem-automation/)** (sample data, no AWS account needed)
 
 ## 🎯 Project Overview
 
