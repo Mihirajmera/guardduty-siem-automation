@@ -8,7 +8,7 @@
     "@aws-amplify/ui-react": "^5.0.0",
     "@aws-sdk/client-cloudwatch-logs": "^3.0.0",
     "@aws-sdk/client-guardduty": "^3.0.0",
-    "aws-amplify": "^5.0.0",
+    "aws-amplify": "^6.22.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
