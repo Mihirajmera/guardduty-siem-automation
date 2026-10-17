@@ -5,7 +5,7 @@
   "private": true,
   "homepage": "https://mihirajmera.github.io/guardduty-siem-automation",
   "dependencies": {
-    "@aws-amplify/ui-react": "^5.0.0",
+    "@aws-amplify/ui-react": "^6.15.7",
     "@aws-sdk/client-cloudwatch-logs": "^3.0.0",
     "@aws-sdk/client-guardduty": "^3.0.0",
     "aws-amplify": "^5.0.0",
