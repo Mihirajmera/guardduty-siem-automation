@@ -2,9 +2,9 @@ name: CI Pipeline
 
 on:
   push:
-    branches: [ master, main ]
+    branches: [master, main]
   pull_request:
-    branches: [ master, main ]
+    branches: [master, main]
 
 permissions:
   contents: read
@@ -15,10 +15,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
       - name: Setup Terraform
-        uses: hashicorp/setup-terraform@v2
+        uses: hashicorp/setup-terraform@dfe3c3f87815947d99a8997f908cb6525fc44e9e # v4.0.1
         with:
           terraform_version: 1.7.0
 
@@ -31,8 +33,10 @@ jobs:
       - name: Terraform Validate
         run: terraform validate
 
+      # Pinned to a commit: a scanner pulled from a moving branch or tag can be swapped for
+      # malicious code without any change to this file.
       - name: Run Trivy Security Scan
-        uses: aquasecurity/trivy-action@master
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
         with:
           scan-type: 'config'
           hide-progress: false
@@ -46,21 +50,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v3
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version: 18
+          node-version: 22
           cache: 'npm'
           cache-dependency-path: react-dashboard/package-lock.json
 
       - name: Install Dependencies
-        run: |
-          cd react-dashboard
-          npm ci || npm install
+        working-directory: react-dashboard
+        run: npm ci
 
+      # CI=true makes lint warnings fail the build, the same as the Pages deploy.
       - name: Build Dashboard
-        run: |
-          cd react-dashboard
-          CI=false npm run build
+        working-directory: react-dashboard
+        run: npm run build

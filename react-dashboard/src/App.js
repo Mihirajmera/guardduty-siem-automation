@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Layout, Card, Table, Tag, Statistic, Row, Col, Alert, Spin } from 'antd';
-import { SecurityScanOutlined, WarningOutlined, CheckCircleOutlined, CloseCircleOutlined } from '@ant-design/icons';
-import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, BarChart, Bar, PieChart, Pie, Cell } from 'recharts';
+import { SecurityScanOutlined, WarningOutlined } from '@ant-design/icons';
+import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, PieChart, Pie, Cell, ResponsiveContainer } from 'recharts';
 import './App.css';
 
 const { Header, Content, Sider } = Layout;
@@ -228,13 +228,14 @@ function App() {
           </Card>
 
           <Card title="Severity Distribution" size="small" style={{ marginTop: '16px' }}>
-            <PieChart width={250} height={200}>
+            <ResponsiveContainer width="100%" height={200}>
+            <PieChart>
               <Pie
                 data={severityData}
-                cx={125}
-                cy={100}
+                cx="50%"
+                cy="50%"
                 innerRadius={40}
-                outerRadius={80}
+                outerRadius={75}
                 paddingAngle={5}
                 dataKey="value"
               >
@@ -244,6 +245,7 @@ function App() {
               </Pie>
               <Tooltip />
             </PieChart>
+            </ResponsiveContainer>
           </Card>
         </Sider>
 
