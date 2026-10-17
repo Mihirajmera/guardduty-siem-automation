@@ -13,7 +13,7 @@
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "recharts": "^2.8.0",
-    "antd": "^5.0.0",
+    "antd": "^6.6.6",
     "@ant-design/icons": "^5.0.0"
   },
   "scripts": {
