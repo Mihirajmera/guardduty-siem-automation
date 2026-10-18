@@ -121,8 +121,8 @@ terraform apply -auto-approve
 **Deploy React Dashboard (Optional)**
 ```bash
 cd react-dashboard
-npm install
-npm start
+npm ci
+npm run dev      # Vite dev server; `npm run build` writes build/
 ```
 
 **Verify Deployment**
