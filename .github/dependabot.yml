@@ -1,11 +1,29 @@
 version: 2
 updates:
-  - package-ecosystem: terraform
-    directory: /
-    schedule: {interval: weekly}
+  # One grouped PR for all actions, so multi-part actions (codeql init/analyze) never
+  # end up at mismatched versions; only releases at least 14 days old are proposed.
   - package-ecosystem: github-actions
     directory: /
     schedule: {interval: weekly}
+    cooldown: {default-days: 14}
+    groups:
+      github-actions:
+        patterns: ["*"]
+
+  - package-ecosystem: terraform
+    directory: /
+    schedule: {interval: weekly}
+    cooldown: {default-days: 14}
+
+  # Minor and patch updates in one PR; major upgrades (React, Ant Design, Amplify) need a
+  # real migration, so they're skipped here and done deliberately.
   - package-ecosystem: npm
     directory: /react-dashboard
     schedule: {interval: weekly}
+    cooldown: {default-days: 14}
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    groups:
+      npm-minor-and-patch:
+        update-types: ["minor", "patch"]
