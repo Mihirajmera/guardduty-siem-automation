@@ -87,6 +87,7 @@ resource "aws_cloudtrail" "main" {
   include_global_service_events = true
   is_multi_region_trail         = true
   enable_logging                = true
+  enable_log_file_validation    = true # CIS AWS 3.2: detect tampering with delivered logs
 
   event_selector {
     read_write_type           = "All"

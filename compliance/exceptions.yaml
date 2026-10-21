@@ -1,0 +1,95 @@
+# Reviewed exceptions to Checkov findings. Every failed check must be fixed or listed here
+# with a decision, a reason and an expiry; CI fails on anything else, including expired entries.
+#   risk-accepted   - the risk is real, compensating controls are in place, owner accepts it
+#   not-applicable  - the check doesn't apply to this design, or is a scanner false positive
+#   deferred        - should be fixed; tracked with a date
+system: guardduty-siem-automation
+owner: Mihir Ajmera
+reviewed: 2026-10-21
+
+exceptions:
+  - check: CKV_AWS_35
+    resources: [aws_cloudtrail.main]
+    decision: deferred
+    reason: Encrypt CloudTrail logs with a customer-managed KMS key (CIS AWS 3.5); needs a key policy for the CloudTrail service. Logs are encrypted with SSE-S3 and integrity-protected by log file validation meanwhile.
+    expires: 2027-01-31
+  - check: CKV2_AWS_10
+    resources: [aws_cloudtrail.main]
+    decision: risk-accepted
+    reason: Detection runs through GuardDuty and EventBridge rather than CloudWatch metric filters on CloudTrail, so the CloudTrail-to-CloudWatch integration would duplicate it.
+    expires: 2027-04-21
+  - check: CKV_AWS_252
+    resources: [aws_cloudtrail.main]
+    decision: not-applicable
+    reason: Log-delivery notifications aren't consumed; security alerts go to the security_alerts SNS topic from the EventBridge pipeline.
+    expires: 2027-04-21
+  - check: CKV2_AWS_3
+    resources: [aws_guardduty_detector.main]
+    decision: not-applicable
+    reason: Single-account deployment. Organization-wide GuardDuty with a delegated administrator applies in AWS Organizations setups.
+    expires: 2027-04-21
+  - check: CKV_AWS_18
+    resources: [aws_s3_bucket.cloudtrail]
+    decision: deferred
+    reason: Server access logging for the CloudTrail bucket needs a separate log bucket.
+    expires: 2027-01-31
+  - check: CKV_AWS_144
+    resources: [aws_s3_bucket.cloudtrail]
+    decision: not-applicable
+    reason: Single-region reference deployment; cross-region replication of trail logs belongs to a production disaster-recovery design.
+    expires: 2027-04-21
+  - check: CKV_AWS_145
+    resources: [aws_s3_bucket.cloudtrail]
+    decision: deferred
+    reason: Same customer-managed KMS key work as CKV_AWS_35.
+    expires: 2027-01-31
+  - check: CKV2_AWS_61
+    resources: [aws_s3_bucket.cloudtrail]
+    decision: deferred
+    reason: Add a lifecycle rule (archive after 90 days, keep for the agreed retention period).
+    expires: 2027-01-31
+  - check: CKV2_AWS_62
+    resources: [aws_s3_bucket.cloudtrail]
+    decision: not-applicable
+    reason: No consumer needs object-level events for the trail bucket.
+    expires: 2027-04-21
+  - check: CKV_AWS_26
+    resources: [aws_sns_topic.security_alerts]
+    decision: deferred
+    reason: Enable SSE with the AWS-managed SNS key; alert messages contain finding metadata.
+    expires: 2027-01-31
+  - check: CKV_AWS_158
+    resources: [aws_cloudwatch_log_group.guardduty_findings]
+    decision: risk-accepted
+    reason: Encrypted with the CloudWatch Logs service key. A customer-managed key adds key-policy management with little benefit here.
+    expires: 2027-04-21
+  - check: CKV_AWS_50
+    resources: ["*"]
+    decision: not-applicable
+    reason: Small event-driven functions; CloudWatch Logs are enough and X-Ray adds cost without diagnostic value here.
+    expires: 2027-04-21
+  - check: CKV_AWS_115
+    resources: ["*"]
+    decision: not-applicable
+    reason: Triggered by GuardDuty findings at low volume; account concurrency limits are sufficient.
+    expires: 2027-04-21
+  - check: CKV_AWS_116
+    resources: ["*"]
+    decision: deferred
+    reason: Add a dead-letter queue so a failed quarantine is retained and alerted on.
+    expires: 2027-01-31
+  - check: CKV_AWS_117
+    resources: ["*"]
+    decision: not-applicable
+    reason: Functions only call public AWS APIs (EC2, SNS); placing them in a VPC would add NAT cost without reducing exposure.
+    expires: 2027-04-21
+  - check: CKV_AWS_173
+    resources: ["*"]
+    decision: not-applicable
+    reason: Environment variables hold only resource identifiers, no secrets; default Lambda encryption at rest applies.
+    expires: 2027-04-21
+  - check: CKV_AWS_272
+    resources: ["*"]
+    decision: deferred
+    reason: Code signing needs an AWS Signer profile; planned with the move to packaged deployment artifacts.
+    expires: 2027-01-31

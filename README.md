@@ -13,6 +13,18 @@ Enterprise-grade Security Information and Event Management (SIEM) with automated
 
 This project implements a comprehensive Security Information and Event Management (SIEM) solution using AWS GuardDuty, CloudTrail, and EventBridge. It features automated incident response with Lambda functions that can quarantine compromised EC2 instances and send real-time alerts through SNS. The solution includes an optional React dashboard for security monitoring and log analysis.
 
+## Compliance evidence (policy as code)
+
+Every change is scanned with [Checkov](https://www.checkov.io/) in CI, and each result is mapped to **NIST SP 800-53 Rev. 5** and the **CIS AWS Foundations Benchmark v3.0.0** ([`compliance/iac_controls.yaml`](compliance/iac_controls.yaml)). A finding can't just be ignored: it has to be **fixed**, or recorded in [`compliance/exceptions.yaml`](compliance/exceptions.yaml) as *risk-accepted*, *not-applicable* or *deferred*, with a reason and an expiry date. CI fails on any finding without a valid exception, including expired ones.
+
+**→ [Read the evidence report](compliance/report.md)** · [OSCAL assessment results](compliance/assessment-results.json)
+
+```bash
+pip install --require-hashes -r compliance/requirements.txt
+checkov -d . --framework terraform -o json --compact --skip-download --skip-path compliance > compliance/checkov.json
+python compliance/iac_evidence.py compliance/checkov.json
+```
+
 ## 🏆 Key Achievements
 
 - ✅ Automated Threat Detection - GuardDuty with malware protection

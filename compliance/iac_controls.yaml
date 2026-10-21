@@ -1,0 +1,112 @@
+# Checkov check -> NIST SP 800-53 Rev. 5 and CIS AWS Foundations Benchmark v3.0.0.
+# Mappings are my own judgment, kept deliberately narrow: a CIS ID is listed only where the
+# check tests the same thing as the benchmark recommendation. Checks not listed are reported
+# as "unmapped".
+checks:
+  # --- Identity and access management ----------------------------------------------------
+  CKV_AWS_1:   {nist_800_53: [AC-6], cis_aws: ["1.16"]}        # no full "*:*" admin policies
+  CKV_AWS_62:  {nist_800_53: [AC-6], cis_aws: ["1.16"]}
+  CKV_AWS_49:  {nist_800_53: [AC-6]}
+  CKV_AWS_63:  {nist_800_53: [AC-6]}
+  CKV_AWS_356: {nist_800_53: [AC-6]}
+  CKV_AWS_107: {nist_800_53: [AC-6, IA-5]}                     # credentials exposure
+  CKV_AWS_108: {nist_800_53: [AC-6, SC-7]}                     # data exfiltration
+  CKV_AWS_109: {nist_800_53: [AC-6, AC-2]}                     # permissions management
+  CKV_AWS_110: {nist_800_53: [AC-6]}                           # privilege escalation
+  CKV_AWS_111: {nist_800_53: [AC-6]}                           # unconstrained write
+  CKV_AWS_60:  {nist_800_53: [AC-6, AC-3]}                     # who can assume a role
+  CKV_AWS_61:  {nist_800_53: [AC-6, AC-3]}
+  CKV_AWS_274: {nist_800_53: [AC-6]}                           # AdministratorAccess
+  CKV_AWS_283: {nist_800_53: [AC-3, AC-6]}                     # any-principal resource policies
+  CKV_AWS_358: {nist_800_53: [AC-3, IA-8]}                     # GitHub OIDC claims
+  CKV_AWS_393: {nist_800_53: [AC-3, IA-8]}
+  CKV2_AWS_40: {nist_800_53: [AC-6]}                           # full IAM privileges
+  CKV2_AWS_56: {nist_800_53: [AC-6]}                           # IAMFullAccess
+  CKV2_AWS_14: {nist_800_53: [AC-2]}
+  CKV2_AWS_21: {nist_800_53: [AC-2], cis_aws: ["1.15"]}        # permissions only through groups
+  CKV2_AWS_22: {nist_800_53: [AC-2, AC-6]}                     # IAM user console access
+  CKV_AWS_273: {nist_800_53: [AC-2, IA-2]}                     # SSO instead of IAM users
+  CKV2_AWS_41: {nist_800_53: [IA-5, AC-6]}                     # instance role, not keys
+  CKV_AWS_41:  {nist_800_53: [IA-5]}                           # no hard-coded provider keys
+  CKV_AWS_45:  {nist_800_53: [IA-5]}                           # no secrets in Lambda env
+  CKV_AWS_46:  {nist_800_53: [IA-5]}                           # no secrets in user data
+
+  # --- Logging and monitoring ------------------------------------------------------------
+  CKV_AWS_67:  {nist_800_53: [AU-2, AU-12], cis_aws: ["3.1"]}  # CloudTrail in all regions
+  CKV_AWS_251: {nist_800_53: [AU-2, AU-12]}
+  CKV_AWS_36:  {nist_800_53: [AU-9], cis_aws: ["3.2"]}         # log file validation
+  CKV_AWS_35:  {nist_800_53: [AU-9, SC-28], cis_aws: ["3.5"]}  # CloudTrail KMS CMK
+  CKV2_AWS_10: {nist_800_53: [AU-6, SI-4]}                     # CloudTrail -> CloudWatch
+  CKV_AWS_252: {nist_800_53: [AU-5, SI-4]}                     # CloudTrail SNS topic
+  CKV2_AWS_11: {nist_800_53: [AU-12, SI-4], cis_aws: ["3.7"]}  # VPC flow logs
+  CKV2_AWS_48: {nist_800_53: [CM-8, CM-2], cis_aws: ["3.3"]}   # AWS Config records everything
+  CKV_AWS_18:  {nist_800_53: [AU-2, AU-12]}                    # S3 access logging
+  CKV_AWS_91:  {nist_800_53: [AU-2, AU-12]}                    # load balancer access logs
+  CKV_AWS_66:  {nist_800_53: [AU-11]}                          # log retention set
+  CKV_AWS_338: {nist_800_53: [AU-11]}                          # log retention >= 1 year
+  CKV_AWS_50:  {nist_800_53: [AU-12, SI-4]}                    # Lambda X-Ray tracing
+  CKV_AWS_126: {nist_800_53: [SI-4]}                           # EC2 detailed monitoring
+  CKV_AWS_238: {nist_800_53: [SI-4]}                           # GuardDuty enabled
+  CKV2_AWS_3:  {nist_800_53: [SI-4]}
+  CKV2_AWS_62: {nist_800_53: [SI-4]}                           # S3 event notifications
+
+  # --- Data protection -------------------------------------------------------------------
+  CKV_AWS_19:  {nist_800_53: [SC-28]}
+  CKV_AWS_145: {nist_800_53: [SC-28, SC-12]}                   # S3 KMS encryption
+  CKV_AWS_8:   {nist_800_53: [SC-28]}                          # EBS encryption
+  CKV_AWS_26:  {nist_800_53: [SC-28]}                          # SNS encryption
+  CKV_AWS_158: {nist_800_53: [SC-28]}                          # CloudWatch Logs KMS
+  CKV_AWS_173: {nist_800_53: [SC-28]}                          # Lambda env encryption
+  CKV_AWS_21:  {nist_800_53: [CP-9, SI-12]}                    # S3 versioning
+  CKV_AWS_144: {nist_800_53: [CP-9, CP-6]}                     # cross-region replication
+  CKV2_AWS_61: {nist_800_53: [SI-12]}                          # S3 lifecycle
+  CKV_AWS_20:  {nist_800_53: [AC-3, AC-21]}                    # public-read ACL
+  CKV_AWS_57:  {nist_800_53: [AC-3, AC-21]}                    # public-write ACL
+  CKV_AWS_53:  {nist_800_53: [AC-3, SC-7], cis_aws: ["2.1.4"]} # S3 Block Public Access
+  CKV_AWS_54:  {nist_800_53: [AC-3, SC-7], cis_aws: ["2.1.4"]}
+  CKV_AWS_55:  {nist_800_53: [AC-3, SC-7], cis_aws: ["2.1.4"]}
+  CKV_AWS_56:  {nist_800_53: [AC-3, SC-7], cis_aws: ["2.1.4"]}
+  CKV2_AWS_6:  {nist_800_53: [AC-3, SC-7], cis_aws: ["2.1.4"]}
+  CKV_AWS_93:  {nist_800_53: [AC-3]}                           # bucket policy lockout
+  CKV2_AWS_75: {nist_800_53: [AC-4, SC-7]}                     # open CORS
+
+  # --- Network ---------------------------------------------------------------------------
+  CKV2_AWS_12: {nist_800_53: [SC-7, AC-4], cis_aws: ["5.4"]}   # default SG restricts all
+  CKV_AWS_24:  {nist_800_53: [SC-7, AC-4], cis_aws: ["5.2"]}   # no 0.0.0.0/0 to 22
+  CKV_AWS_25:  {nist_800_53: [SC-7, AC-4], cis_aws: ["5.2"]}   # no 0.0.0.0/0 to 3389
+  CKV_AWS_277: {nist_800_53: [SC-7, AC-4]}
+  CKV_AWS_260: {nist_800_53: [SC-7, AC-4]}
+  CKV_AWS_382: {nist_800_53: [SC-7, AC-4]}
+  CKV_AWS_130: {nist_800_53: [SC-7]}                           # no public IP by default
+  CKV_AWS_88:  {nist_800_53: [SC-7]}
+  CKV2_AWS_35: {nist_800_53: [SC-7]}
+  CKV2_AWS_44: {nist_800_53: [SC-7, AC-4]}
+  CKV2_AWS_5:  {nist_800_53: [CM-7]}                           # unattached security groups
+  CKV2_AWS_19: {nist_800_53: [CM-7]}                           # unattached EIPs
+  CKV_AWS_23:  {nist_800_53: [CM-6]}                           # documented SG rules
+  CKV_AWS_117: {nist_800_53: [SC-7]}                           # Lambda in a VPC
+  CKV_AWS_301: {nist_800_53: [AC-3, AC-6]}                     # Lambda not public
+  CKV_AWS_364: {nist_800_53: [AC-3, AC-6]}                     # Lambda permission SourceArn
+
+  # --- Transport security and load balancers ---------------------------------------------
+  CKV_AWS_2:   {nist_800_53: [SC-8]}
+  CKV_AWS_378: {nist_800_53: [SC-8]}
+  CKV2_AWS_20: {nist_800_53: [SC-8]}
+  CKV_AWS_103: {nist_800_53: [SC-8, SC-13]}
+  CKV2_AWS_74: {nist_800_53: [SC-8, SC-13]}
+  CKV2_AWS_28: {nist_800_53: [SC-7, SI-4]}                     # WAF on public ALB
+  CKV2_AWS_76: {nist_800_53: [SI-3, SC-7]}                     # WAF Log4j rule
+  CKV_AWS_131: {nist_800_53: [SI-10]}                          # drop invalid headers
+  CKV_AWS_328: {nist_800_53: [SI-10]}                          # desync mitigation
+  CKV_AWS_150: {nist_800_53: [CM-3]}                           # deletion protection
+  CKV_AWS_261: {nist_800_53: [SC-5]}                           # target group health checks
+
+  # --- Compute and configuration ---------------------------------------------------------
+  CKV_AWS_79:  {nist_800_53: [CM-6, SC-7]}                     # IMDSv2 only
+  CKV_AWS_386: {nist_800_53: [CM-2, SI-7]}                     # AMI name confusion
+  CKV_AWS_135: {nist_800_53: [SC-5]}                           # EBS-optimized (availability)
+  CKV_AWS_394: {nist_800_53: [CM-2]}                           # pinned AZ identity
+  CKV_AWS_363: {nist_800_53: [SI-2, SA-22]}                    # deprecated Lambda runtime
+  CKV_AWS_272: {nist_800_53: [SI-7, CM-14]}                    # Lambda code signing
+  CKV_AWS_115: {nist_800_53: [SC-5]}                           # Lambda concurrency limit
+  CKV_AWS_116: {nist_800_53: [SI-11]}                          # Lambda dead-letter queue

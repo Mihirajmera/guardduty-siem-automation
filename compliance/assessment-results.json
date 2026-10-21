@@ -1,0 +1,3471 @@
+{
+  "assessment-results": {
+    "uuid": "cacac888-5d59-5fcf-b46e-e0c354b6cd47",
+    "metadata": {
+      "title": "IaC compliance evidence: guardduty-siem-automation",
+      "last-modified": "2026-10-21T00:00:00+00:00",
+      "version": "1.0",
+      "oscal-version": "1.1.2"
+    },
+    "import-ap": {
+      "href": "#"
+    },
+    "results": [
+      {
+        "uuid": "c31a2975-3902-5fcb-a323-12ba4aa9618b",
+        "title": "Checkov 3.3.22",
+        "start": "2026-10-21T00:00:00+00:00",
+        "description": "Scan output sha256 cf7b5bb5353a495c62973b00af6ea536f8a68470caa874610c90367a02aaec77",
+        "observations": [
+          {
+            "uuid": "14c5f9bc-3799-5bfc-82a4-258fee0896c0",
+            "title": "CKV_AWS_93 aws_s3_bucket.cloudtrail",
+            "description": "Ensure S3 bucket policy does not lockout all but root user. (Prevent lockouts needing root account fixes)",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "8dfcd597-3540-504a-bb86-d15e725989db",
+            "title": "CKV_AWS_53 aws_s3_bucket_public_access_block.cloudtrail",
+            "description": "Ensure S3 bucket has block public ACLS enabled",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "a2c629d0-cca3-5aab-8c4c-77e1af60b034",
+            "title": "CKV_AWS_54 aws_s3_bucket_public_access_block.cloudtrail",
+            "description": "Ensure S3 bucket has block public policy enabled",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "2a153dbf-4ba0-595e-9c85-c7a3b9bc40b3",
+            "title": "CKV_AWS_55 aws_s3_bucket_public_access_block.cloudtrail",
+            "description": "Ensure S3 bucket has ignore public ACLs enabled",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "fc208651-a548-5fa1-b04b-1b6540a7e374",
+            "title": "CKV_AWS_56 aws_s3_bucket_public_access_block.cloudtrail",
+            "description": "Ensure S3 bucket has 'restrict_public_buckets' enabled",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "eef672a5-13d8-5152-a079-72ffe7ab64fd",
+            "title": "CKV_AWS_93 aws_s3_bucket_policy.cloudtrail",
+            "description": "Ensure S3 bucket policy does not lockout all but root user. (Prevent lockouts needing root account fixes)",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "0f90c77f-463f-5692-925f-c7fb2c356c09",
+            "title": "CKV_AWS_251 aws_cloudtrail.main",
+            "description": "Ensure CloudTrail logging is enabled",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "661f17d4-c128-539a-b867-b5d22c41017c",
+            "title": "CKV_AWS_36 aws_cloudtrail.main",
+            "description": "Ensure CloudTrail log file validation is enabled",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "d46d482f-9836-5dcd-ad8f-cddffd538a4a",
+            "title": "CKV_AWS_67 aws_cloudtrail.main",
+            "description": "Ensure CloudTrail is enabled in all Regions",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "433d5e21-045d-5b21-9f0d-c8f264aeccae",
+            "title": "CKV_AWS_1 aws_iam_policy_document.cloudtrail_bucket_policy",
+            "description": "Ensure IAM policies that allow full \"*-*\" administrative privileges are not created",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "d0beb146-d1c8-518a-ad90-a3958fd0ce7b",
+            "title": "CKV_AWS_358 aws_iam_policy_document.cloudtrail_bucket_policy",
+            "description": "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "8bc86c38-2717-5fad-a510-f4a1c821e9f7",
+            "title": "CKV_AWS_107 aws_iam_policy_document.cloudtrail_bucket_policy",
+            "description": "Ensure IAM policies does not allow credentials exposure",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "6da7ddde-1117-5eae-8f54-82865be2c373",
+            "title": "CKV_AWS_108 aws_iam_policy_document.cloudtrail_bucket_policy",
+            "description": "Ensure IAM policies does not allow data exfiltration",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "89db8c1e-9d3d-56ca-bd61-0b2abcc24a1d",
+            "title": "CKV_AWS_109 aws_iam_policy_document.cloudtrail_bucket_policy",
+            "description": "Ensure IAM policies does not allow permissions management / resource exposure without constraints",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "cd7cd9be-07fa-5d7d-a4ce-0efeafd14967",
+            "title": "CKV_AWS_110 aws_iam_policy_document.cloudtrail_bucket_policy",
+            "description": "Ensure IAM policies does not allow privilege escalation",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "8e74bfc5-e5ce-5d81-a7a2-53c8af40ce36",
+            "title": "CKV_AWS_283 aws_iam_policy_document.cloudtrail_bucket_policy",
+            "description": "Ensure no IAM policies documents allow ALL or any AWS principal permissions to the resource",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "ed28f4c6-8268-554d-acde-6d84a564a5ef",
+            "title": "CKV_AWS_111 aws_iam_policy_document.cloudtrail_bucket_policy",
+            "description": "Ensure IAM policies does not allow write access without constraints",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "a5afce08-a584-5ae0-9629-0da7fd2e4566",
+            "title": "CKV_AWS_356 aws_iam_policy_document.cloudtrail_bucket_policy",
+            "description": "Ensure no IAM policies documents allow \"*\" as a statement's resource for restrictable actions",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "6ecb28d4-9fb3-56b0-a0d3-f061bf2ad576",
+            "title": "CKV_AWS_49 aws_iam_policy_document.cloudtrail_bucket_policy",
+            "description": "Ensure no IAM policies documents allow \"*\" as a statement's actions",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "7208173e-0e73-50ad-81b5-e6098ef2a25c",
+            "title": "CKV_AWS_66 aws_cloudwatch_log_group.guardduty_findings",
+            "description": "Ensure that CloudWatch Log Group specifies retention days",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "48038c6f-94cb-5a0c-858d-58091b5c274f",
+            "title": "CKV_AWS_338 aws_cloudwatch_log_group.guardduty_findings",
+            "description": "Ensure CloudWatch log groups retains logs for at least 1 year",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "c7d8dc37-cf2c-508d-a160-51742113683d",
+            "title": "CKV_AWS_393 aws_iam_role.lambda_security_role",
+            "description": "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order on IAM role",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "982abce5-a46b-52e7-b0b8-1631735272c2",
+            "title": "CKV_AWS_274 aws_iam_role.lambda_security_role",
+            "description": "Disallow IAM roles, users, and groups from using the AWS AdministratorAccess policy",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "c3c77cc5-3cdd-51da-9bb0-9dae2fdbbb9d",
+            "title": "CKV_AWS_61 aws_iam_role.lambda_security_role",
+            "description": "Ensure AWS IAM policy does not allow assume role permission across all services",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "42ed084a-5beb-5962-b6b5-dc676b5a36aa",
+            "title": "CKV_AWS_60 aws_iam_role.lambda_security_role",
+            "description": "Ensure IAM role allows only specific services or principals to assume it",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "4f066156-d30e-5b47-a5ad-8236065c6658",
+            "title": "CKV_AWS_274 aws_iam_role_policy_attachment.lambda_basic_execution",
+            "description": "Disallow IAM roles, users, and groups from using the AWS AdministratorAccess policy",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "a002ab58-5802-5a20-a47e-802c0b2a8505",
+            "title": "CKV_AWS_62 aws_iam_policy.lambda_security_policy",
+            "description": "Ensure IAM policies that allow full \"*-*\" administrative privileges are not created",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "43f406b2-7c66-548d-8f0e-8c32d7107771",
+            "title": "CKV_AWS_63 aws_iam_policy.lambda_security_policy",
+            "description": "Ensure no IAM policies documents allow \"*\" as a statement's actions",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "626434c6-95e4-5291-a570-6a369762857a",
+            "title": "CKV_AWS_274 aws_iam_role_policy_attachment.lambda_security_policy",
+            "description": "Disallow IAM roles, users, and groups from using the AWS AdministratorAccess policy",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "93b9674b-8cb8-5c0a-a0be-261d975d1461",
+            "title": "CKV_AWS_1 aws_iam_policy_document.lambda_security_policy",
+            "description": "Ensure IAM policies that allow full \"*-*\" administrative privileges are not created",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "c376317a-b417-5996-845e-5dd14ae1d3af",
+            "title": "CKV_AWS_358 aws_iam_policy_document.lambda_security_policy",
+            "description": "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "619c0c55-f34d-5c85-89c7-8db1f3ddd2ef",
+            "title": "CKV_AWS_107 aws_iam_policy_document.lambda_security_policy",
+            "description": "Ensure IAM policies does not allow credentials exposure",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "0129b8b4-dbfb-5c87-a8df-236ce13a850d",
+            "title": "CKV_AWS_108 aws_iam_policy_document.lambda_security_policy",
+            "description": "Ensure IAM policies does not allow data exfiltration",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "44aecc7c-1baa-5f89-ad82-c034e1aab526",
+            "title": "CKV_AWS_109 aws_iam_policy_document.lambda_security_policy",
+            "description": "Ensure IAM policies does not allow permissions management / resource exposure without constraints",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "fb09088d-df2b-5ff4-9193-9fca832d5a90",
+            "title": "CKV_AWS_110 aws_iam_policy_document.lambda_security_policy",
+            "description": "Ensure IAM policies does not allow privilege escalation",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "1e4c1ca1-fa6c-5906-99e3-f2d8d47ad325",
+            "title": "CKV_AWS_283 aws_iam_policy_document.lambda_security_policy",
+            "description": "Ensure no IAM policies documents allow ALL or any AWS principal permissions to the resource",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "f3b61bdb-ca4f-563c-b05a-d7f70a229c8b",
+            "title": "CKV_AWS_111 aws_iam_policy_document.lambda_security_policy",
+            "description": "Ensure IAM policies does not allow write access without constraints",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "ee09784f-1142-52d4-9a0c-e993ddcbc0f9",
+            "title": "CKV_AWS_356 aws_iam_policy_document.lambda_security_policy",
+            "description": "Ensure no IAM policies documents allow \"*\" as a statement's resource for restrictable actions",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "3c1a6317-359a-56e6-b7b2-9680d3f75576",
+            "title": "CKV_AWS_49 aws_iam_policy_document.lambda_security_policy",
+            "description": "Ensure no IAM policies documents allow \"*\" as a statement's actions",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "2080d254-1f4c-5b62-ab12-122328a371f4",
+            "title": "CKV_AWS_238 aws_guardduty_detector.main",
+            "description": "Ensure that GuardDuty detector is enabled",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "b489576e-f829-55bf-ba4f-3dc641286c28",
+            "title": "CKV_AWS_363 aws_lambda_function.finding_logger",
+            "description": "Ensure Lambda Runtime is not deprecated",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "ec6212d1-c4fa-524a-ab07-dd0884a22592",
+            "title": "CKV_AWS_45 aws_lambda_function.finding_logger",
+            "description": "Ensure no hard-coded secrets exist in lambda environment",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "09896e00-fdf7-522e-a641-2a5f7f855696",
+            "title": "CKV_AWS_301 aws_lambda_permission.allow_logger_eventbridge",
+            "description": "Ensure that AWS Lambda function is not publicly accessible",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "17aad53a-765c-5aec-9a0a-d54d0660a755",
+            "title": "CKV_AWS_364 aws_lambda_permission.allow_logger_eventbridge",
+            "description": "Ensure that AWS Lambda function permissions delegated to AWS services are limited by SourceArn or SourceAccount",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "a1cb9764-bb17-5909-bb9f-59a825da94b0",
+            "title": "CKV_AWS_363 aws_lambda_function.auto_quarantine",
+            "description": "Ensure Lambda Runtime is not deprecated",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "9979e1a5-8c05-579b-8ffe-66dce9346b22",
+            "title": "CKV_AWS_45 aws_lambda_function.auto_quarantine",
+            "description": "Ensure no hard-coded secrets exist in lambda environment",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "e67b6183-8e54-585b-a579-21214c42ddd8",
+            "title": "CKV_AWS_301 aws_lambda_permission.allow_quarantine_eventbridge",
+            "description": "Ensure that AWS Lambda function is not publicly accessible",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "d651ec44-b66a-5622-928f-f7a8adbe6e19",
+            "title": "CKV_AWS_364 aws_lambda_permission.allow_quarantine_eventbridge",
+            "description": "Ensure that AWS Lambda function permissions delegated to AWS services are limited by SourceArn or SourceAccount",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "053ff338-353c-501d-9a30-06d64aeffa5a",
+            "title": "CKV_AWS_41 aws.default",
+            "description": "Ensure no hard coded AWS access key and secret key exists in provider",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "7a1b342c-bafb-5efd-856c-82b71027c50b",
+            "title": "CKV2_AWS_56 aws_iam_role.lambda_security_role",
+            "description": "Ensure AWS Managed IAMFullAccess IAM policy is not used.",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "d921d1d5-1836-505d-b153-8b62dfc9c757",
+            "title": "CKV2_AWS_56 aws_iam_role_policy_attachment.lambda_basic_execution",
+            "description": "Ensure AWS Managed IAMFullAccess IAM policy is not used.",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "0f8e25cf-0882-5a9d-91b9-b206b18b9dfd",
+            "title": "CKV2_AWS_75 aws_lambda_function.finding_logger",
+            "description": "Ensure no open CORS policy",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "a84db014-7053-5d39-9a73-451176fd5b44",
+            "title": "CKV2_AWS_75 aws_lambda_function.auto_quarantine",
+            "description": "Ensure no open CORS policy",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "855ae9e4-fc02-5562-aa15-c4ce126f8358",
+            "title": "CKV_AWS_20 aws_s3_bucket.cloudtrail",
+            "description": "S3 Bucket has an ACL defined which allows public READ access.",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "810ee37f-db89-5f72-b460-685974d6c3e8",
+            "title": "CKV_AWS_57 aws_s3_bucket.cloudtrail",
+            "description": "S3 Bucket has an ACL defined which allows public WRITE access.",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "b21989f4-b886-5d63-95fe-182bdc93c0fb",
+            "title": "CKV2_AWS_6 aws_s3_bucket.cloudtrail",
+            "description": "Ensure that S3 bucket has a Public Access block",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "e909469c-d17d-5207-a473-cea45a0e4086",
+            "title": "CKV_AWS_21 aws_s3_bucket.cloudtrail",
+            "description": "Ensure all data stored in the S3 bucket have versioning enabled",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "659165ad-2b9f-5e6c-9c0b-653a21cc7915",
+            "title": "CKV_AWS_19 aws_s3_bucket.cloudtrail",
+            "description": "Ensure all data stored in the S3 bucket is securely encrypted at rest",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "05c136c5-521d-5002-9f6f-c00f7d210328",
+            "title": "CKV2_AWS_40 aws_iam_policy_document.cloudtrail_bucket_policy",
+            "description": "Ensure AWS IAM policy does not allow full IAM privileges",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "6795195c-f2d3-5056-98e8-2568902ef7bd",
+            "title": "CKV2_AWS_40 aws_iam_policy_document.lambda_security_policy",
+            "description": "Ensure AWS IAM policy does not allow full IAM privileges",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "satisfied"
+              }
+            ]
+          },
+          {
+            "uuid": "3e4e4627-b64f-5a91-8666-8162ba271735",
+            "title": "CKV_AWS_252 aws_cloudtrail.main",
+            "description": "Ensure CloudTrail defines an SNS Topic",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: not-applicable, expires 2027-04-21"
+              }
+            ]
+          },
+          {
+            "uuid": "fca8ffb5-b7ff-533d-9eea-3ee055986ae0",
+            "title": "CKV_AWS_35 aws_cloudtrail.main",
+            "description": "Ensure CloudTrail logs are encrypted at rest using KMS CMKs",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: deferred, expires 2027-01-31"
+              }
+            ]
+          },
+          {
+            "uuid": "1e0f1206-8ac8-5fa4-a729-e5f5b4b134d7",
+            "title": "CKV_AWS_26 aws_sns_topic.security_alerts",
+            "description": "Ensure all data stored in the SNS topic is encrypted",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: deferred, expires 2027-01-31"
+              }
+            ]
+          },
+          {
+            "uuid": "ed6e23ec-fd63-56a5-958d-ba2b02a777c1",
+            "title": "CKV_AWS_158 aws_cloudwatch_log_group.guardduty_findings",
+            "description": "Ensure that CloudWatch Log Group is encrypted by KMS",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: risk-accepted, expires 2027-04-21"
+              }
+            ]
+          },
+          {
+            "uuid": "302cbc7a-7136-5bbf-8c49-03d319f6ce80",
+            "title": "CKV_AWS_272 aws_lambda_function.finding_logger",
+            "description": "Ensure AWS Lambda function is configured to validate code-signing",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: deferred, expires 2027-01-31"
+              }
+            ]
+          },
+          {
+            "uuid": "5a9741aa-3517-525d-bd09-58914957c794",
+            "title": "CKV_AWS_116 aws_lambda_function.finding_logger",
+            "description": "Ensure that AWS Lambda function is configured for a Dead Letter Queue(DLQ)",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: deferred, expires 2027-01-31"
+              }
+            ]
+          },
+          {
+            "uuid": "02ecac5a-af08-5a9e-90cb-204631bf2505",
+            "title": "CKV_AWS_173 aws_lambda_function.finding_logger",
+            "description": "Check encryption settings for Lambda environmental variable",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: not-applicable, expires 2027-04-21"
+              }
+            ]
+          },
+          {
+            "uuid": "36194d84-528a-514c-898e-b75c9dfda220",
+            "title": "CKV_AWS_115 aws_lambda_function.finding_logger",
+            "description": "Ensure that AWS Lambda function is configured for function-level concurrent execution limit",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: not-applicable, expires 2027-04-21"
+              }
+            ]
+          },
+          {
+            "uuid": "a739eaf0-8fe3-56de-986f-9dc2fc6a0d3e",
+            "title": "CKV_AWS_117 aws_lambda_function.finding_logger",
+            "description": "Ensure that AWS Lambda function is configured inside a VPC",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: not-applicable, expires 2027-04-21"
+              }
+            ]
+          },
+          {
+            "uuid": "4564ef59-7929-54c5-8870-8d4fc838759c",
+            "title": "CKV_AWS_50 aws_lambda_function.finding_logger",
+            "description": "X-Ray tracing is enabled for Lambda",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: not-applicable, expires 2027-04-21"
+              }
+            ]
+          },
+          {
+            "uuid": "cc8af968-9b99-5b77-97a9-180fbbe17b17",
+            "title": "CKV_AWS_272 aws_lambda_function.auto_quarantine",
+            "description": "Ensure AWS Lambda function is configured to validate code-signing",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: deferred, expires 2027-01-31"
+              }
+            ]
+          },
+          {
+            "uuid": "f34fe4b8-6817-52a9-be08-fe2e35d239aa",
+            "title": "CKV_AWS_116 aws_lambda_function.auto_quarantine",
+            "description": "Ensure that AWS Lambda function is configured for a Dead Letter Queue(DLQ)",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: deferred, expires 2027-01-31"
+              }
+            ]
+          },
+          {
+            "uuid": "83a6ef93-e34c-534a-9c32-5d39f47e585e",
+            "title": "CKV_AWS_173 aws_lambda_function.auto_quarantine",
+            "description": "Check encryption settings for Lambda environmental variable",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: not-applicable, expires 2027-04-21"
+              }
+            ]
+          },
+          {
+            "uuid": "1fb2fa3d-36df-5e7c-ac3e-dcdfc6da7373",
+            "title": "CKV_AWS_115 aws_lambda_function.auto_quarantine",
+            "description": "Ensure that AWS Lambda function is configured for function-level concurrent execution limit",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: not-applicable, expires 2027-04-21"
+              }
+            ]
+          },
+          {
+            "uuid": "9e16a509-6ee9-5244-b6ee-5b085c2f8d5b",
+            "title": "CKV_AWS_117 aws_lambda_function.auto_quarantine",
+            "description": "Ensure that AWS Lambda function is configured inside a VPC",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: not-applicable, expires 2027-04-21"
+              }
+            ]
+          },
+          {
+            "uuid": "c38b655f-4223-5ddf-91ce-3f31efacb137",
+            "title": "CKV_AWS_50 aws_lambda_function.auto_quarantine",
+            "description": "X-Ray tracing is enabled for Lambda",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: not-applicable, expires 2027-04-21"
+              }
+            ]
+          },
+          {
+            "uuid": "08db2a61-f1b0-5012-a21c-2af775132bc5",
+            "title": "CKV2_AWS_10 aws_cloudtrail.main",
+            "description": "Ensure CloudTrail trails are integrated with CloudWatch Logs",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: risk-accepted, expires 2027-04-21"
+              }
+            ]
+          },
+          {
+            "uuid": "7ba6616f-6def-5d96-9d44-fb9dcd8596e3",
+            "title": "CKV2_AWS_62 aws_s3_bucket.cloudtrail",
+            "description": "Ensure S3 buckets should have event notifications enabled",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: not-applicable, expires 2027-04-21"
+              }
+            ]
+          },
+          {
+            "uuid": "fc711143-42d4-5804-8cd2-fad08ffd9647",
+            "title": "CKV2_AWS_3 aws_guardduty_detector.main",
+            "description": "Ensure GuardDuty is enabled to specific org/region",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: not-applicable, expires 2027-04-21"
+              }
+            ]
+          },
+          {
+            "uuid": "02f0ec9b-fb70-5448-b9b8-11270d1c2670",
+            "title": "CKV_AWS_18 aws_s3_bucket.cloudtrail",
+            "description": "Ensure the S3 bucket has access logging enabled",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: deferred, expires 2027-01-31"
+              }
+            ]
+          },
+          {
+            "uuid": "9d7f9f43-5d8f-54e7-92c8-5cc443ed2a52",
+            "title": "CKV_AWS_144 aws_s3_bucket.cloudtrail",
+            "description": "Ensure that S3 bucket has cross-region replication enabled",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: not-applicable, expires 2027-04-21"
+              }
+            ]
+          },
+          {
+            "uuid": "54ebc175-5fcc-5bb2-9801-d520f3cc8d71",
+            "title": "CKV_AWS_145 aws_s3_bucket.cloudtrail",
+            "description": "Ensure that S3 buckets are encrypted with KMS by default",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: deferred, expires 2027-01-31"
+              }
+            ]
+          },
+          {
+            "uuid": "9265a17f-f9b2-54d7-9af4-158c02a78dc7",
+            "title": "CKV2_AWS_61 aws_s3_bucket.cloudtrail",
+            "description": "Ensure that an S3 bucket has a lifecycle configuration",
+            "methods": [
+              "TEST"
+            ],
+            "collected": "2026-10-21T00:00:00+00:00",
+            "props": [
+              {
+                "name": "result",
+                "value": "not-satisfied"
+              },
+              {
+                "name": "remark",
+                "value": "exception: deferred, expires 2027-01-31"
+              }
+            ]
+          }
+        ],
+        "findings": [
+          {
+            "uuid": "6a87d210-c00b-5a98-ab75-2f4f23518f56",
+            "title": "CKV_AWS_93 -> AC-3",
+            "description": "Ensure S3 bucket policy does not lockout all but root user. (Prevent lockouts needing root account fixes)",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "14c5f9bc-3799-5bfc-82a4-258fee0896c0"
+              }
+            ]
+          },
+          {
+            "uuid": "034d9fa3-4883-5d04-9149-c61fe1583c94",
+            "title": "CKV_AWS_53 -> AC-3",
+            "description": "Ensure S3 bucket has block public ACLS enabled",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "8dfcd597-3540-504a-bb86-d15e725989db"
+              }
+            ]
+          },
+          {
+            "uuid": "058f2c64-a173-59f2-a1bf-85fac6aad7e6",
+            "title": "CKV_AWS_53 -> SC-7",
+            "description": "Ensure S3 bucket has block public ACLS enabled",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "8dfcd597-3540-504a-bb86-d15e725989db"
+              }
+            ]
+          },
+          {
+            "uuid": "d9035a2c-a1c1-531a-8312-7541a7c2e6e9",
+            "title": "CKV_AWS_54 -> AC-3",
+            "description": "Ensure S3 bucket has block public policy enabled",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "a2c629d0-cca3-5aab-8c4c-77e1af60b034"
+              }
+            ]
+          },
+          {
+            "uuid": "e5ef40ea-e93a-5881-95d7-010f202f5b7d",
+            "title": "CKV_AWS_54 -> SC-7",
+            "description": "Ensure S3 bucket has block public policy enabled",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "a2c629d0-cca3-5aab-8c4c-77e1af60b034"
+              }
+            ]
+          },
+          {
+            "uuid": "cbf6d003-e55a-5837-8cf8-ecac83e44580",
+            "title": "CKV_AWS_55 -> AC-3",
+            "description": "Ensure S3 bucket has ignore public ACLs enabled",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "2a153dbf-4ba0-595e-9c85-c7a3b9bc40b3"
+              }
+            ]
+          },
+          {
+            "uuid": "aba256ab-970d-5c63-9f04-4999e53bbf2e",
+            "title": "CKV_AWS_55 -> SC-7",
+            "description": "Ensure S3 bucket has ignore public ACLs enabled",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "2a153dbf-4ba0-595e-9c85-c7a3b9bc40b3"
+              }
+            ]
+          },
+          {
+            "uuid": "30e912bf-cd96-5005-a042-e54d1c58a3fc",
+            "title": "CKV_AWS_56 -> AC-3",
+            "description": "Ensure S3 bucket has 'restrict_public_buckets' enabled",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "fc208651-a548-5fa1-b04b-1b6540a7e374"
+              }
+            ]
+          },
+          {
+            "uuid": "05f667bb-ff1e-54c3-9e7f-7ea9d9edd239",
+            "title": "CKV_AWS_56 -> SC-7",
+            "description": "Ensure S3 bucket has 'restrict_public_buckets' enabled",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "fc208651-a548-5fa1-b04b-1b6540a7e374"
+              }
+            ]
+          },
+          {
+            "uuid": "2cc6073b-92a5-5f0d-be61-96d725b3f2fc",
+            "title": "CKV_AWS_93 -> AC-3",
+            "description": "Ensure S3 bucket policy does not lockout all but root user. (Prevent lockouts needing root account fixes)",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "eef672a5-13d8-5152-a079-72ffe7ab64fd"
+              }
+            ]
+          },
+          {
+            "uuid": "c654f2ff-4101-5c08-ab5d-d97e118e5eaa",
+            "title": "CKV_AWS_251 -> AU-2",
+            "description": "Ensure CloudTrail logging is enabled",
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-2_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "0f90c77f-463f-5692-925f-c7fb2c356c09"
+              }
+            ]
+          },
+          {
+            "uuid": "cc8b890f-90d7-5062-a9a3-306267df7eeb",
+            "title": "CKV_AWS_251 -> AU-12",
+            "description": "Ensure CloudTrail logging is enabled",
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-12_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "0f90c77f-463f-5692-925f-c7fb2c356c09"
+              }
+            ]
+          },
+          {
+            "uuid": "dd0b896d-708b-58c8-9d47-dfd3e3027300",
+            "title": "CKV_AWS_36 -> AU-9",
+            "description": "Ensure CloudTrail log file validation is enabled",
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-9_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "661f17d4-c128-539a-b867-b5d22c41017c"
+              }
+            ]
+          },
+          {
+            "uuid": "d7973ff8-79b6-51e3-84b3-0fa59e00e980",
+            "title": "CKV_AWS_67 -> AU-2",
+            "description": "Ensure CloudTrail is enabled in all Regions",
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-2_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "d46d482f-9836-5dcd-ad8f-cddffd538a4a"
+              }
+            ]
+          },
+          {
+            "uuid": "c0535ce4-8a0e-5265-a261-2840bba2a954",
+            "title": "CKV_AWS_67 -> AU-12",
+            "description": "Ensure CloudTrail is enabled in all Regions",
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-12_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "d46d482f-9836-5dcd-ad8f-cddffd538a4a"
+              }
+            ]
+          },
+          {
+            "uuid": "931245bc-464f-5658-affd-f2450cfabbea",
+            "title": "CKV_AWS_1 -> AC-6",
+            "description": "Ensure IAM policies that allow full \"*-*\" administrative privileges are not created",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "433d5e21-045d-5b21-9f0d-c8f264aeccae"
+              }
+            ]
+          },
+          {
+            "uuid": "ce312589-f336-507a-8aca-e99b29aa998d",
+            "title": "CKV_AWS_358 -> AC-3",
+            "description": "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "d0beb146-d1c8-518a-ad90-a3958fd0ce7b"
+              }
+            ]
+          },
+          {
+            "uuid": "dcb5c930-d5e6-58d5-8518-35157d5a9478",
+            "title": "CKV_AWS_358 -> IA-8",
+            "description": "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-8_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "d0beb146-d1c8-518a-ad90-a3958fd0ce7b"
+              }
+            ]
+          },
+          {
+            "uuid": "715f347e-c8cd-5243-9d32-fe7eafe18d17",
+            "title": "CKV_AWS_107 -> AC-6",
+            "description": "Ensure IAM policies does not allow credentials exposure",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "8bc86c38-2717-5fad-a510-f4a1c821e9f7"
+              }
+            ]
+          },
+          {
+            "uuid": "71164b33-b3ed-5b60-aab6-b3b515bbedf8",
+            "title": "CKV_AWS_107 -> IA-5",
+            "description": "Ensure IAM policies does not allow credentials exposure",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-5_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "8bc86c38-2717-5fad-a510-f4a1c821e9f7"
+              }
+            ]
+          },
+          {
+            "uuid": "8477cfe8-29ef-54ea-ac0e-1fd40ca1e035",
+            "title": "CKV_AWS_108 -> AC-6",
+            "description": "Ensure IAM policies does not allow data exfiltration",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "6da7ddde-1117-5eae-8f54-82865be2c373"
+              }
+            ]
+          },
+          {
+            "uuid": "1daf91f4-35e1-5498-811f-61f5f3d8071d",
+            "title": "CKV_AWS_108 -> SC-7",
+            "description": "Ensure IAM policies does not allow data exfiltration",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "6da7ddde-1117-5eae-8f54-82865be2c373"
+              }
+            ]
+          },
+          {
+            "uuid": "f94d734c-8eb3-5920-b0c2-8808f7dd74eb",
+            "title": "CKV_AWS_109 -> AC-6",
+            "description": "Ensure IAM policies does not allow permissions management / resource exposure without constraints",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "89db8c1e-9d3d-56ca-bd61-0b2abcc24a1d"
+              }
+            ]
+          },
+          {
+            "uuid": "ff25c68f-33a6-5811-9eb8-17ff12015a63",
+            "title": "CKV_AWS_109 -> AC-2",
+            "description": "Ensure IAM policies does not allow permissions management / resource exposure without constraints",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-2_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "89db8c1e-9d3d-56ca-bd61-0b2abcc24a1d"
+              }
+            ]
+          },
+          {
+            "uuid": "fec580f8-92ca-5d90-81a4-2a8b482a85d4",
+            "title": "CKV_AWS_110 -> AC-6",
+            "description": "Ensure IAM policies does not allow privilege escalation",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "cd7cd9be-07fa-5d7d-a4ce-0efeafd14967"
+              }
+            ]
+          },
+          {
+            "uuid": "b6658fd8-72f1-5bee-a39a-7ca57667e1f7",
+            "title": "CKV_AWS_283 -> AC-3",
+            "description": "Ensure no IAM policies documents allow ALL or any AWS principal permissions to the resource",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "8e74bfc5-e5ce-5d81-a7a2-53c8af40ce36"
+              }
+            ]
+          },
+          {
+            "uuid": "00df3447-70dd-5b6b-ac30-9f3351967260",
+            "title": "CKV_AWS_283 -> AC-6",
+            "description": "Ensure no IAM policies documents allow ALL or any AWS principal permissions to the resource",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "8e74bfc5-e5ce-5d81-a7a2-53c8af40ce36"
+              }
+            ]
+          },
+          {
+            "uuid": "28ee7c7d-92d8-5e6d-b167-8140c9d02a3e",
+            "title": "CKV_AWS_111 -> AC-6",
+            "description": "Ensure IAM policies does not allow write access without constraints",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "ed28f4c6-8268-554d-acde-6d84a564a5ef"
+              }
+            ]
+          },
+          {
+            "uuid": "c5fee740-270b-5504-b6d0-02953ec807e3",
+            "title": "CKV_AWS_356 -> AC-6",
+            "description": "Ensure no IAM policies documents allow \"*\" as a statement's resource for restrictable actions",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "a5afce08-a584-5ae0-9629-0da7fd2e4566"
+              }
+            ]
+          },
+          {
+            "uuid": "d131fa8f-b436-5f41-9f26-c388315a6230",
+            "title": "CKV_AWS_49 -> AC-6",
+            "description": "Ensure no IAM policies documents allow \"*\" as a statement's actions",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "6ecb28d4-9fb3-56b0-a0d3-f061bf2ad576"
+              }
+            ]
+          },
+          {
+            "uuid": "64ebd67a-1795-54d4-9f29-038b415e92d1",
+            "title": "CKV_AWS_66 -> AU-11",
+            "description": "Ensure that CloudWatch Log Group specifies retention days",
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-11_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "7208173e-0e73-50ad-81b5-e6098ef2a25c"
+              }
+            ]
+          },
+          {
+            "uuid": "d7a3628c-f340-5784-9e62-ee7644bcbd98",
+            "title": "CKV_AWS_338 -> AU-11",
+            "description": "Ensure CloudWatch log groups retains logs for at least 1 year",
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-11_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "48038c6f-94cb-5a0c-858d-58091b5c274f"
+              }
+            ]
+          },
+          {
+            "uuid": "4c514c09-4430-5246-9107-b9944bd7b1e4",
+            "title": "CKV_AWS_393 -> AC-3",
+            "description": "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order on IAM role",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "c7d8dc37-cf2c-508d-a160-51742113683d"
+              }
+            ]
+          },
+          {
+            "uuid": "b34229fe-8b77-562d-83c6-7f6ca53e71e3",
+            "title": "CKV_AWS_393 -> IA-8",
+            "description": "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order on IAM role",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-8_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "c7d8dc37-cf2c-508d-a160-51742113683d"
+              }
+            ]
+          },
+          {
+            "uuid": "f7bc0941-ee7f-5204-bd74-28c35ca76ffe",
+            "title": "CKV_AWS_274 -> AC-6",
+            "description": "Disallow IAM roles, users, and groups from using the AWS AdministratorAccess policy",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "982abce5-a46b-52e7-b0b8-1631735272c2"
+              }
+            ]
+          },
+          {
+            "uuid": "02c6eabd-d835-557b-83d1-0a6119a41e15",
+            "title": "CKV_AWS_61 -> AC-6",
+            "description": "Ensure AWS IAM policy does not allow assume role permission across all services",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "c3c77cc5-3cdd-51da-9bb0-9dae2fdbbb9d"
+              }
+            ]
+          },
+          {
+            "uuid": "59b1e4ce-2392-51de-adfe-5799143c0c7e",
+            "title": "CKV_AWS_61 -> AC-3",
+            "description": "Ensure AWS IAM policy does not allow assume role permission across all services",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "c3c77cc5-3cdd-51da-9bb0-9dae2fdbbb9d"
+              }
+            ]
+          },
+          {
+            "uuid": "fbbae137-66ec-5854-a1ea-f83150b211b5",
+            "title": "CKV_AWS_60 -> AC-6",
+            "description": "Ensure IAM role allows only specific services or principals to assume it",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "42ed084a-5beb-5962-b6b5-dc676b5a36aa"
+              }
+            ]
+          },
+          {
+            "uuid": "22a55fc4-717a-5293-97b4-e7f775ef2cc5",
+            "title": "CKV_AWS_60 -> AC-3",
+            "description": "Ensure IAM role allows only specific services or principals to assume it",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "42ed084a-5beb-5962-b6b5-dc676b5a36aa"
+              }
+            ]
+          },
+          {
+            "uuid": "188e1937-ba35-56f5-8914-235087379640",
+            "title": "CKV_AWS_274 -> AC-6",
+            "description": "Disallow IAM roles, users, and groups from using the AWS AdministratorAccess policy",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "4f066156-d30e-5b47-a5ad-8236065c6658"
+              }
+            ]
+          },
+          {
+            "uuid": "b2890fc9-3714-5cda-8107-2a6162a6e0ba",
+            "title": "CKV_AWS_62 -> AC-6",
+            "description": "Ensure IAM policies that allow full \"*-*\" administrative privileges are not created",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "a002ab58-5802-5a20-a47e-802c0b2a8505"
+              }
+            ]
+          },
+          {
+            "uuid": "4de89c43-1a20-574f-900d-4716848cca0d",
+            "title": "CKV_AWS_63 -> AC-6",
+            "description": "Ensure no IAM policies documents allow \"*\" as a statement's actions",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "43f406b2-7c66-548d-8f0e-8c32d7107771"
+              }
+            ]
+          },
+          {
+            "uuid": "4a64968e-4fe1-5fa1-a9ed-8c32db1e8f7d",
+            "title": "CKV_AWS_274 -> AC-6",
+            "description": "Disallow IAM roles, users, and groups from using the AWS AdministratorAccess policy",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "626434c6-95e4-5291-a570-6a369762857a"
+              }
+            ]
+          },
+          {
+            "uuid": "c037420b-30f9-5941-85a9-b952216d0582",
+            "title": "CKV_AWS_1 -> AC-6",
+            "description": "Ensure IAM policies that allow full \"*-*\" administrative privileges are not created",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "93b9674b-8cb8-5c0a-a0be-261d975d1461"
+              }
+            ]
+          },
+          {
+            "uuid": "4ad25b36-352b-5596-897b-f6a4e3acfc43",
+            "title": "CKV_AWS_358 -> AC-3",
+            "description": "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "c376317a-b417-5996-845e-5dd14ae1d3af"
+              }
+            ]
+          },
+          {
+            "uuid": "cc6c63b8-31dc-51af-af2c-a34cd7dfdb7c",
+            "title": "CKV_AWS_358 -> IA-8",
+            "description": "Ensure AWS GitHub Actions OIDC authorization policies only allow safe claims and claim order",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-8_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "c376317a-b417-5996-845e-5dd14ae1d3af"
+              }
+            ]
+          },
+          {
+            "uuid": "37ddd8a0-80af-5d0f-9129-a22236800276",
+            "title": "CKV_AWS_107 -> AC-6",
+            "description": "Ensure IAM policies does not allow credentials exposure",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "619c0c55-f34d-5c85-89c7-8db1f3ddd2ef"
+              }
+            ]
+          },
+          {
+            "uuid": "f1b52365-d51c-55f7-a980-75fea676caed",
+            "title": "CKV_AWS_107 -> IA-5",
+            "description": "Ensure IAM policies does not allow credentials exposure",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-5_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "619c0c55-f34d-5c85-89c7-8db1f3ddd2ef"
+              }
+            ]
+          },
+          {
+            "uuid": "726dae39-9ef4-5fb3-9e75-6d0c342fc35b",
+            "title": "CKV_AWS_108 -> AC-6",
+            "description": "Ensure IAM policies does not allow data exfiltration",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "0129b8b4-dbfb-5c87-a8df-236ce13a850d"
+              }
+            ]
+          },
+          {
+            "uuid": "31ab2122-f96e-5dd1-9cae-59c89f956ee8",
+            "title": "CKV_AWS_108 -> SC-7",
+            "description": "Ensure IAM policies does not allow data exfiltration",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "0129b8b4-dbfb-5c87-a8df-236ce13a850d"
+              }
+            ]
+          },
+          {
+            "uuid": "a1171f7d-f1a5-5cbc-b13a-8220cb6d3635",
+            "title": "CKV_AWS_109 -> AC-6",
+            "description": "Ensure IAM policies does not allow permissions management / resource exposure without constraints",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "44aecc7c-1baa-5f89-ad82-c034e1aab526"
+              }
+            ]
+          },
+          {
+            "uuid": "db465f88-93b7-584c-a179-175e77ff797c",
+            "title": "CKV_AWS_109 -> AC-2",
+            "description": "Ensure IAM policies does not allow permissions management / resource exposure without constraints",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-2_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "44aecc7c-1baa-5f89-ad82-c034e1aab526"
+              }
+            ]
+          },
+          {
+            "uuid": "acd64704-d28d-53ee-b956-3d1aa69b7d15",
+            "title": "CKV_AWS_110 -> AC-6",
+            "description": "Ensure IAM policies does not allow privilege escalation",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "fb09088d-df2b-5ff4-9193-9fca832d5a90"
+              }
+            ]
+          },
+          {
+            "uuid": "077b42ef-5e7f-567b-8852-aec274fdb638",
+            "title": "CKV_AWS_283 -> AC-3",
+            "description": "Ensure no IAM policies documents allow ALL or any AWS principal permissions to the resource",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "1e4c1ca1-fa6c-5906-99e3-f2d8d47ad325"
+              }
+            ]
+          },
+          {
+            "uuid": "2f90f6e4-b3d4-55be-8cba-36eefa9fd94b",
+            "title": "CKV_AWS_283 -> AC-6",
+            "description": "Ensure no IAM policies documents allow ALL or any AWS principal permissions to the resource",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "1e4c1ca1-fa6c-5906-99e3-f2d8d47ad325"
+              }
+            ]
+          },
+          {
+            "uuid": "2bbcf793-37e6-5229-8bf5-f1507ed86eb2",
+            "title": "CKV_AWS_111 -> AC-6",
+            "description": "Ensure IAM policies does not allow write access without constraints",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "f3b61bdb-ca4f-563c-b05a-d7f70a229c8b"
+              }
+            ]
+          },
+          {
+            "uuid": "99541e0b-59f5-56b3-a630-e8359416b70d",
+            "title": "CKV_AWS_356 -> AC-6",
+            "description": "Ensure no IAM policies documents allow \"*\" as a statement's resource for restrictable actions",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "ee09784f-1142-52d4-9a0c-e993ddcbc0f9"
+              }
+            ]
+          },
+          {
+            "uuid": "b9b0e834-15ec-5c79-9056-d7a7d192396c",
+            "title": "CKV_AWS_49 -> AC-6",
+            "description": "Ensure no IAM policies documents allow \"*\" as a statement's actions",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "3c1a6317-359a-56e6-b7b2-9680d3f75576"
+              }
+            ]
+          },
+          {
+            "uuid": "4085ffb3-f52c-57bc-b8d5-11d728ea5cf6",
+            "title": "CKV_AWS_238 -> SI-4",
+            "description": "Ensure that GuardDuty detector is enabled",
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-4_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "2080d254-1f4c-5b62-ab12-122328a371f4"
+              }
+            ]
+          },
+          {
+            "uuid": "938f3da4-0091-5781-b0b9-d4295ef80c2f",
+            "title": "CKV_AWS_363 -> SI-2",
+            "description": "Ensure Lambda Runtime is not deprecated",
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-2_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "b489576e-f829-55bf-ba4f-3dc641286c28"
+              }
+            ]
+          },
+          {
+            "uuid": "445a523f-a92a-5375-a884-bf4e2ce93c40",
+            "title": "CKV_AWS_363 -> SA-22",
+            "description": "Ensure Lambda Runtime is not deprecated",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sa-22_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "b489576e-f829-55bf-ba4f-3dc641286c28"
+              }
+            ]
+          },
+          {
+            "uuid": "9c40610b-1926-59a7-a8a8-fb1207c7c2cf",
+            "title": "CKV_AWS_45 -> IA-5",
+            "description": "Ensure no hard-coded secrets exist in lambda environment",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-5_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "ec6212d1-c4fa-524a-ab07-dd0884a22592"
+              }
+            ]
+          },
+          {
+            "uuid": "f035f82d-34c9-5375-bb31-a9007a20b779",
+            "title": "CKV_AWS_301 -> AC-3",
+            "description": "Ensure that AWS Lambda function is not publicly accessible",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "09896e00-fdf7-522e-a641-2a5f7f855696"
+              }
+            ]
+          },
+          {
+            "uuid": "ba32c8b1-2707-573b-bf00-8a3d51614cea",
+            "title": "CKV_AWS_301 -> AC-6",
+            "description": "Ensure that AWS Lambda function is not publicly accessible",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "09896e00-fdf7-522e-a641-2a5f7f855696"
+              }
+            ]
+          },
+          {
+            "uuid": "b28f5a4e-df03-54bd-b998-d70d98608f9d",
+            "title": "CKV_AWS_364 -> AC-3",
+            "description": "Ensure that AWS Lambda function permissions delegated to AWS services are limited by SourceArn or SourceAccount",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "17aad53a-765c-5aec-9a0a-d54d0660a755"
+              }
+            ]
+          },
+          {
+            "uuid": "f95ea215-2d2b-57db-b6aa-f28864cbc8e9",
+            "title": "CKV_AWS_364 -> AC-6",
+            "description": "Ensure that AWS Lambda function permissions delegated to AWS services are limited by SourceArn or SourceAccount",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "17aad53a-765c-5aec-9a0a-d54d0660a755"
+              }
+            ]
+          },
+          {
+            "uuid": "26baa039-e3f1-520b-8136-4ff0faaae022",
+            "title": "CKV_AWS_363 -> SI-2",
+            "description": "Ensure Lambda Runtime is not deprecated",
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-2_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "a1cb9764-bb17-5909-bb9f-59a825da94b0"
+              }
+            ]
+          },
+          {
+            "uuid": "439e1a0d-d7ce-588a-a1ec-3bea8efa49d4",
+            "title": "CKV_AWS_363 -> SA-22",
+            "description": "Ensure Lambda Runtime is not deprecated",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sa-22_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "a1cb9764-bb17-5909-bb9f-59a825da94b0"
+              }
+            ]
+          },
+          {
+            "uuid": "322107d4-f456-5f3c-a609-1010bb361c4e",
+            "title": "CKV_AWS_45 -> IA-5",
+            "description": "Ensure no hard-coded secrets exist in lambda environment",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-5_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "9979e1a5-8c05-579b-8ffe-66dce9346b22"
+              }
+            ]
+          },
+          {
+            "uuid": "183a92d4-eb4f-57f8-8eaa-34f2faec6542",
+            "title": "CKV_AWS_301 -> AC-3",
+            "description": "Ensure that AWS Lambda function is not publicly accessible",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "e67b6183-8e54-585b-a579-21214c42ddd8"
+              }
+            ]
+          },
+          {
+            "uuid": "eb817c88-cd23-578e-ab20-9a2cfb03289e",
+            "title": "CKV_AWS_301 -> AC-6",
+            "description": "Ensure that AWS Lambda function is not publicly accessible",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "e67b6183-8e54-585b-a579-21214c42ddd8"
+              }
+            ]
+          },
+          {
+            "uuid": "cde76f29-b390-5e4d-a29c-19b9cf9c44e2",
+            "title": "CKV_AWS_364 -> AC-3",
+            "description": "Ensure that AWS Lambda function permissions delegated to AWS services are limited by SourceArn or SourceAccount",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "d651ec44-b66a-5622-928f-f7a8adbe6e19"
+              }
+            ]
+          },
+          {
+            "uuid": "fe36ca46-8477-58d8-8923-bad7b5e4308a",
+            "title": "CKV_AWS_364 -> AC-6",
+            "description": "Ensure that AWS Lambda function permissions delegated to AWS services are limited by SourceArn or SourceAccount",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "d651ec44-b66a-5622-928f-f7a8adbe6e19"
+              }
+            ]
+          },
+          {
+            "uuid": "23843c48-eeeb-5504-82d0-77b6e5add05b",
+            "title": "CKV_AWS_41 -> IA-5",
+            "description": "Ensure no hard coded AWS access key and secret key exists in provider",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ia-5_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "053ff338-353c-501d-9a30-06d64aeffa5a"
+              }
+            ]
+          },
+          {
+            "uuid": "c354ae6c-14c2-5b63-aa95-c81326ce2dd2",
+            "title": "CKV2_AWS_56 -> AC-6",
+            "description": "Ensure AWS Managed IAMFullAccess IAM policy is not used.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "7a1b342c-bafb-5efd-856c-82b71027c50b"
+              }
+            ]
+          },
+          {
+            "uuid": "219a1fbc-de44-55b5-b7ab-0a45703b4042",
+            "title": "CKV2_AWS_56 -> AC-6",
+            "description": "Ensure AWS Managed IAMFullAccess IAM policy is not used.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "d921d1d5-1836-505d-b153-8b62dfc9c757"
+              }
+            ]
+          },
+          {
+            "uuid": "c75fb213-f2f0-53a0-b88f-12b9ac2a8b05",
+            "title": "CKV2_AWS_75 -> AC-4",
+            "description": "Ensure no open CORS policy",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-4_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "0f8e25cf-0882-5a9d-91b9-b206b18b9dfd"
+              }
+            ]
+          },
+          {
+            "uuid": "ffef48ee-2adf-5ba5-a142-dc4e83a38471",
+            "title": "CKV2_AWS_75 -> SC-7",
+            "description": "Ensure no open CORS policy",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "0f8e25cf-0882-5a9d-91b9-b206b18b9dfd"
+              }
+            ]
+          },
+          {
+            "uuid": "c68c8b71-ab98-5915-b7a4-c185360b0a08",
+            "title": "CKV2_AWS_75 -> AC-4",
+            "description": "Ensure no open CORS policy",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-4_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "a84db014-7053-5d39-9a73-451176fd5b44"
+              }
+            ]
+          },
+          {
+            "uuid": "650444e5-297c-5050-a4ab-31786d2e01c4",
+            "title": "CKV2_AWS_75 -> SC-7",
+            "description": "Ensure no open CORS policy",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "a84db014-7053-5d39-9a73-451176fd5b44"
+              }
+            ]
+          },
+          {
+            "uuid": "1575a062-e850-5d27-b482-02bdd666109a",
+            "title": "CKV_AWS_20 -> AC-3",
+            "description": "S3 Bucket has an ACL defined which allows public READ access.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "855ae9e4-fc02-5562-aa15-c4ce126f8358"
+              }
+            ]
+          },
+          {
+            "uuid": "6595f5e6-8ccb-50d5-a190-8fb2297c7f54",
+            "title": "CKV_AWS_20 -> AC-21",
+            "description": "S3 Bucket has an ACL defined which allows public READ access.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-21_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "855ae9e4-fc02-5562-aa15-c4ce126f8358"
+              }
+            ]
+          },
+          {
+            "uuid": "0fa23ac8-8183-54f8-87c5-115f6f9a7fa8",
+            "title": "CKV_AWS_57 -> AC-3",
+            "description": "S3 Bucket has an ACL defined which allows public WRITE access.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "810ee37f-db89-5f72-b460-685974d6c3e8"
+              }
+            ]
+          },
+          {
+            "uuid": "b41195d2-1218-5975-a531-dec50766a36e",
+            "title": "CKV_AWS_57 -> AC-21",
+            "description": "S3 Bucket has an ACL defined which allows public WRITE access.",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-21_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "810ee37f-db89-5f72-b460-685974d6c3e8"
+              }
+            ]
+          },
+          {
+            "uuid": "353fae1d-7ef1-5356-a8d6-0c3126310975",
+            "title": "CKV2_AWS_6 -> AC-3",
+            "description": "Ensure that S3 bucket has a Public Access block",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-3_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "b21989f4-b886-5d63-95fe-182bdc93c0fb"
+              }
+            ]
+          },
+          {
+            "uuid": "e06eb45e-5119-506c-8236-de810a5912cb",
+            "title": "CKV2_AWS_6 -> SC-7",
+            "description": "Ensure that S3 bucket has a Public Access block",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "b21989f4-b886-5d63-95fe-182bdc93c0fb"
+              }
+            ]
+          },
+          {
+            "uuid": "9879203a-7512-5085-9e74-2503df558da8",
+            "title": "CKV_AWS_21 -> CP-9",
+            "description": "Ensure all data stored in the S3 bucket have versioning enabled",
+            "target": {
+              "type": "objective-id",
+              "target-id": "cp-9_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "e909469c-d17d-5207-a473-cea45a0e4086"
+              }
+            ]
+          },
+          {
+            "uuid": "995c25e8-e5e5-5eed-874f-e2c913649c4b",
+            "title": "CKV_AWS_21 -> SI-12",
+            "description": "Ensure all data stored in the S3 bucket have versioning enabled",
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-12_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "e909469c-d17d-5207-a473-cea45a0e4086"
+              }
+            ]
+          },
+          {
+            "uuid": "dfe5f490-7895-5817-94d4-727c4e6369c0",
+            "title": "CKV_AWS_19 -> SC-28",
+            "description": "Ensure all data stored in the S3 bucket is securely encrypted at rest",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-28_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "659165ad-2b9f-5e6c-9c0b-653a21cc7915"
+              }
+            ]
+          },
+          {
+            "uuid": "20255467-6cdf-53e6-8c7a-858ba9a7381a",
+            "title": "CKV2_AWS_40 -> AC-6",
+            "description": "Ensure AWS IAM policy does not allow full IAM privileges",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "05c136c5-521d-5002-9f6f-c00f7d210328"
+              }
+            ]
+          },
+          {
+            "uuid": "34f712e6-7099-5824-a0e2-27d60efbc239",
+            "title": "CKV2_AWS_40 -> AC-6",
+            "description": "Ensure AWS IAM policy does not allow full IAM privileges",
+            "target": {
+              "type": "objective-id",
+              "target-id": "ac-6_obj",
+              "status": {
+                "state": "satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "6795195c-f2d3-5056-98e8-2568902ef7bd"
+              }
+            ]
+          },
+          {
+            "uuid": "3d5cc5bf-3632-5497-90d5-ebffc38361e9",
+            "title": "CKV_AWS_252 -> AU-5",
+            "description": "Ensure CloudTrail defines an SNS Topic",
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-5_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "3e4e4627-b64f-5a91-8666-8162ba271735"
+              }
+            ]
+          },
+          {
+            "uuid": "ae170398-a019-58dc-9ec0-4ec398c7dcf4",
+            "title": "CKV_AWS_252 -> SI-4",
+            "description": "Ensure CloudTrail defines an SNS Topic",
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-4_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "3e4e4627-b64f-5a91-8666-8162ba271735"
+              }
+            ]
+          },
+          {
+            "uuid": "4ebe01ff-8ae0-5537-80e3-63d401074f79",
+            "title": "CKV_AWS_35 -> AU-9",
+            "description": "Ensure CloudTrail logs are encrypted at rest using KMS CMKs",
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-9_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "fca8ffb5-b7ff-533d-9eea-3ee055986ae0"
+              }
+            ]
+          },
+          {
+            "uuid": "dc256960-f6d3-5c56-ab01-f255e029398d",
+            "title": "CKV_AWS_35 -> SC-28",
+            "description": "Ensure CloudTrail logs are encrypted at rest using KMS CMKs",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-28_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "fca8ffb5-b7ff-533d-9eea-3ee055986ae0"
+              }
+            ]
+          },
+          {
+            "uuid": "214f44b1-716a-5206-a159-8e6fef5cb97a",
+            "title": "CKV_AWS_26 -> SC-28",
+            "description": "Ensure all data stored in the SNS topic is encrypted",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-28_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "1e0f1206-8ac8-5fa4-a729-e5f5b4b134d7"
+              }
+            ]
+          },
+          {
+            "uuid": "2e046fc1-ebe6-54cd-88eb-6fec0a067b27",
+            "title": "CKV_AWS_158 -> SC-28",
+            "description": "Ensure that CloudWatch Log Group is encrypted by KMS",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-28_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "ed6e23ec-fd63-56a5-958d-ba2b02a777c1"
+              }
+            ]
+          },
+          {
+            "uuid": "25710c49-52d6-569b-83dd-602ddfc69d58",
+            "title": "CKV_AWS_272 -> SI-7",
+            "description": "Ensure AWS Lambda function is configured to validate code-signing",
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-7_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "302cbc7a-7136-5bbf-8c49-03d319f6ce80"
+              }
+            ]
+          },
+          {
+            "uuid": "58e1f860-cb4c-53b8-b730-85f7f185a1ed",
+            "title": "CKV_AWS_272 -> CM-14",
+            "description": "Ensure AWS Lambda function is configured to validate code-signing",
+            "target": {
+              "type": "objective-id",
+              "target-id": "cm-14_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "302cbc7a-7136-5bbf-8c49-03d319f6ce80"
+              }
+            ]
+          },
+          {
+            "uuid": "97e0dbc5-bb83-5ade-ad9f-680fdde67620",
+            "title": "CKV_AWS_116 -> SI-11",
+            "description": "Ensure that AWS Lambda function is configured for a Dead Letter Queue(DLQ)",
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-11_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "5a9741aa-3517-525d-bd09-58914957c794"
+              }
+            ]
+          },
+          {
+            "uuid": "c0187aba-2a3e-5430-bfa3-29ddfbba4b17",
+            "title": "CKV_AWS_173 -> SC-28",
+            "description": "Check encryption settings for Lambda environmental variable",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-28_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "02ecac5a-af08-5a9e-90cb-204631bf2505"
+              }
+            ]
+          },
+          {
+            "uuid": "835c4ba6-4343-57d9-a0d9-c5de7e617a51",
+            "title": "CKV_AWS_115 -> SC-5",
+            "description": "Ensure that AWS Lambda function is configured for function-level concurrent execution limit",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-5_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "36194d84-528a-514c-898e-b75c9dfda220"
+              }
+            ]
+          },
+          {
+            "uuid": "94b61689-080c-54e8-927f-198fc112237d",
+            "title": "CKV_AWS_117 -> SC-7",
+            "description": "Ensure that AWS Lambda function is configured inside a VPC",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "a739eaf0-8fe3-56de-986f-9dc2fc6a0d3e"
+              }
+            ]
+          },
+          {
+            "uuid": "0ea04e64-dd44-5ea2-adfc-3e8ca3c1805f",
+            "title": "CKV_AWS_50 -> AU-12",
+            "description": "X-Ray tracing is enabled for Lambda",
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-12_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "4564ef59-7929-54c5-8870-8d4fc838759c"
+              }
+            ]
+          },
+          {
+            "uuid": "dc83070d-a2a4-5b42-b288-5643f686d938",
+            "title": "CKV_AWS_50 -> SI-4",
+            "description": "X-Ray tracing is enabled for Lambda",
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-4_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "4564ef59-7929-54c5-8870-8d4fc838759c"
+              }
+            ]
+          },
+          {
+            "uuid": "dabfb7b7-ea64-57dc-81c1-22dfa5cc60d6",
+            "title": "CKV_AWS_272 -> SI-7",
+            "description": "Ensure AWS Lambda function is configured to validate code-signing",
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-7_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "cc8af968-9b99-5b77-97a9-180fbbe17b17"
+              }
+            ]
+          },
+          {
+            "uuid": "2498a717-815d-545e-9e39-73c5d5d57dfe",
+            "title": "CKV_AWS_272 -> CM-14",
+            "description": "Ensure AWS Lambda function is configured to validate code-signing",
+            "target": {
+              "type": "objective-id",
+              "target-id": "cm-14_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "cc8af968-9b99-5b77-97a9-180fbbe17b17"
+              }
+            ]
+          },
+          {
+            "uuid": "e439562f-b67d-5722-a815-52e090e46217",
+            "title": "CKV_AWS_116 -> SI-11",
+            "description": "Ensure that AWS Lambda function is configured for a Dead Letter Queue(DLQ)",
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-11_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "f34fe4b8-6817-52a9-be08-fe2e35d239aa"
+              }
+            ]
+          },
+          {
+            "uuid": "29274c41-505b-5c0f-99a6-0e1790ef39c7",
+            "title": "CKV_AWS_173 -> SC-28",
+            "description": "Check encryption settings for Lambda environmental variable",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-28_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "83a6ef93-e34c-534a-9c32-5d39f47e585e"
+              }
+            ]
+          },
+          {
+            "uuid": "36b6a2f2-7d81-5c29-af3d-93c7de67faab",
+            "title": "CKV_AWS_115 -> SC-5",
+            "description": "Ensure that AWS Lambda function is configured for function-level concurrent execution limit",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-5_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "1fb2fa3d-36df-5e7c-ac3e-dcdfc6da7373"
+              }
+            ]
+          },
+          {
+            "uuid": "6151319c-33c3-555d-bf7d-0242ddc81123",
+            "title": "CKV_AWS_117 -> SC-7",
+            "description": "Ensure that AWS Lambda function is configured inside a VPC",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-7_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "9e16a509-6ee9-5244-b6ee-5b085c2f8d5b"
+              }
+            ]
+          },
+          {
+            "uuid": "f2f1bcad-0182-57c5-99cd-23fbd4892b69",
+            "title": "CKV_AWS_50 -> AU-12",
+            "description": "X-Ray tracing is enabled for Lambda",
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-12_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "c38b655f-4223-5ddf-91ce-3f31efacb137"
+              }
+            ]
+          },
+          {
+            "uuid": "096ae49c-b56d-53c9-ad0b-705fce35cad4",
+            "title": "CKV_AWS_50 -> SI-4",
+            "description": "X-Ray tracing is enabled for Lambda",
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-4_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "c38b655f-4223-5ddf-91ce-3f31efacb137"
+              }
+            ]
+          },
+          {
+            "uuid": "87cbce4b-118c-5dc3-9058-03e6e6ba4e5f",
+            "title": "CKV2_AWS_10 -> AU-6",
+            "description": "Ensure CloudTrail trails are integrated with CloudWatch Logs",
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-6_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "08db2a61-f1b0-5012-a21c-2af775132bc5"
+              }
+            ]
+          },
+          {
+            "uuid": "ca427561-e3d6-5560-9dee-ad03e23b7039",
+            "title": "CKV2_AWS_10 -> SI-4",
+            "description": "Ensure CloudTrail trails are integrated with CloudWatch Logs",
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-4_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "08db2a61-f1b0-5012-a21c-2af775132bc5"
+              }
+            ]
+          },
+          {
+            "uuid": "a2ea52cf-cb5d-5f74-8df3-b2b41c4afc8f",
+            "title": "CKV2_AWS_62 -> SI-4",
+            "description": "Ensure S3 buckets should have event notifications enabled",
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-4_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "7ba6616f-6def-5d96-9d44-fb9dcd8596e3"
+              }
+            ]
+          },
+          {
+            "uuid": "295283d1-4ab7-5f7a-81da-ddd58527808b",
+            "title": "CKV2_AWS_3 -> SI-4",
+            "description": "Ensure GuardDuty is enabled to specific org/region",
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-4_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "fc711143-42d4-5804-8cd2-fad08ffd9647"
+              }
+            ]
+          },
+          {
+            "uuid": "5962305b-c212-56c9-b178-d34f724af4e1",
+            "title": "CKV_AWS_18 -> AU-2",
+            "description": "Ensure the S3 bucket has access logging enabled",
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-2_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "02f0ec9b-fb70-5448-b9b8-11270d1c2670"
+              }
+            ]
+          },
+          {
+            "uuid": "7128f883-f070-5f76-a83a-af90b07d4bcf",
+            "title": "CKV_AWS_18 -> AU-12",
+            "description": "Ensure the S3 bucket has access logging enabled",
+            "target": {
+              "type": "objective-id",
+              "target-id": "au-12_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "02f0ec9b-fb70-5448-b9b8-11270d1c2670"
+              }
+            ]
+          },
+          {
+            "uuid": "672b3fcf-0111-5b9c-b656-f64f9921858e",
+            "title": "CKV_AWS_144 -> CP-9",
+            "description": "Ensure that S3 bucket has cross-region replication enabled",
+            "target": {
+              "type": "objective-id",
+              "target-id": "cp-9_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "9d7f9f43-5d8f-54e7-92c8-5cc443ed2a52"
+              }
+            ]
+          },
+          {
+            "uuid": "6dd60acd-e9b4-5f01-8680-ebdd044a17f5",
+            "title": "CKV_AWS_144 -> CP-6",
+            "description": "Ensure that S3 bucket has cross-region replication enabled",
+            "target": {
+              "type": "objective-id",
+              "target-id": "cp-6_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "9d7f9f43-5d8f-54e7-92c8-5cc443ed2a52"
+              }
+            ]
+          },
+          {
+            "uuid": "619d44ee-03f4-5dc4-be15-f077f51688ed",
+            "title": "CKV_AWS_145 -> SC-28",
+            "description": "Ensure that S3 buckets are encrypted with KMS by default",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-28_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "54ebc175-5fcc-5bb2-9801-d520f3cc8d71"
+              }
+            ]
+          },
+          {
+            "uuid": "ecc9784b-a653-5922-a856-c0e0f7256c4d",
+            "title": "CKV_AWS_145 -> SC-12",
+            "description": "Ensure that S3 buckets are encrypted with KMS by default",
+            "target": {
+              "type": "objective-id",
+              "target-id": "sc-12_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "54ebc175-5fcc-5bb2-9801-d520f3cc8d71"
+              }
+            ]
+          },
+          {
+            "uuid": "6933e1c3-ac78-58c3-8c5d-acab3cf69ab1",
+            "title": "CKV2_AWS_61 -> SI-12",
+            "description": "Ensure that an S3 bucket has a lifecycle configuration",
+            "target": {
+              "type": "objective-id",
+              "target-id": "si-12_obj",
+              "status": {
+                "state": "not-satisfied"
+              }
+            },
+            "related-observations": [
+              {
+                "observation-uuid": "9265a17f-f9b2-54d7-9af4-158c02a78dc7"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -46,7 +46,7 @@ resource "aws_sns_topic_subscription" "email_alerts" {
 # CloudWatch Log Group for GuardDuty findings
 resource "aws_cloudwatch_log_group" "guardduty_findings" {
   name              = "/aws/guardduty/${local.project_name}/findings"
-  retention_in_days = 30
+  retention_in_days = 365 # security findings: keep a year for investigations and audit
 
   tags = local.tags
 }
@@ -78,51 +78,44 @@ resource "aws_iam_role_policy_attachment" "lambda_basic_execution" {
 
 # IAM Policy for Lambda security functions
 data "aws_iam_policy_document" "lambda_security_policy" {
+  # Exactly the calls the quarantine function makes. Logging comes from the
+  # AWSLambdaBasicExecutionRole attachment above; the logger function needs nothing else.
   statement {
-    sid    = "EC2QuarantineActions"
+    sid       = "DescribeInstances"
+    effect    = "Allow"
+    actions   = ["ec2:DescribeInstances"]
+    resources = ["*"] # Describe* calls don't support resource-level permissions
+  }
+
+  statement {
+    sid    = "QuarantineInstance"
     effect = "Allow"
     actions = [
       "ec2:StopInstances",
-      "ec2:TerminateInstances",
-      "ec2:ModifyInstanceAttribute",
-      "ec2:CreateTags",
-      "ec2:DescribeInstances",
-      "ec2:DescribeSecurityGroups",
-      "ec2:RevokeSecurityGroupIngress",
-      "ec2:RevokeSecurityGroupEgress"
+      "ec2:ModifyInstanceAttribute"
     ]
-    resources = ["*"]
+    resources = ["arn:aws:ec2:*:*:instance/*"]
   }
 
   statement {
-    sid    = "SNSNotifications"
-    effect = "Allow"
-    actions = [
-      "sns:Publish"
-    ]
+    sid       = "CreateQuarantineSecurityGroup"
+    effect    = "Allow"
+    actions   = ["ec2:CreateSecurityGroup"]
+    resources = ["arn:aws:ec2:*:*:vpc/*", "arn:aws:ec2:*:*:security-group/*"]
+  }
+
+  statement {
+    sid       = "TagQuarantinedResources"
+    effect    = "Allow"
+    actions   = ["ec2:CreateTags"]
+    resources = ["arn:aws:ec2:*:*:instance/*", "arn:aws:ec2:*:*:security-group/*"]
+  }
+
+  statement {
+    sid       = "SNSNotifications"
+    effect    = "Allow"
+    actions   = ["sns:Publish"]
     resources = [aws_sns_topic.security_alerts.arn]
-  }
-
-  statement {
-    sid    = "CloudWatchLogs"
-    effect = "Allow"
-    actions = [
-      "logs:CreateLogGroup",
-      "logs:CreateLogStream",
-      "logs:PutLogEvents"
-    ]
-    resources = ["*"]
-  }
-
-  statement {
-    sid    = "GuardDutyAccess"
-    effect = "Allow"
-    actions = [
-      "guardduty:GetFindings",
-      "guardduty:ListFindings",
-      "guardduty:UpdateFindingsFeedback"
-    ]
-    resources = ["*"]
   }
 }
 
