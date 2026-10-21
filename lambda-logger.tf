@@ -4,7 +4,7 @@ resource "aws_lambda_function" "finding_logger" {
   function_name = "${local.project_name}-finding-logger"
   role          = aws_iam_role.lambda_security_role.arn
   handler       = "index.handler"
-  runtime       = "python3.9"
+  runtime       = "python3.12"
   timeout       = 60
 
   environment {

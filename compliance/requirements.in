@@ -1,0 +1,4 @@
+# Compliance scan tools for CI. Regenerate the hash-locked requirements.txt with:
+#   uv pip compile compliance/requirements.in --universal --generate-hashes --python-version 3.12 --exclude-newer 2026-10-03 -o compliance/requirements.txt
+checkov
+pyyaml

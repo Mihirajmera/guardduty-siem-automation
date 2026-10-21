@@ -4,7 +4,7 @@ resource "aws_lambda_function" "auto_quarantine" {
   function_name = "${local.project_name}-auto-quarantine"
   role          = aws_iam_role.lambda_security_role.arn
   handler       = "index.handler"
-  runtime       = "python3.9"
+  runtime       = "python3.12"
   timeout       = 300
 
   environment {
