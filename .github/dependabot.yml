@@ -4,7 +4,7 @@ updates:
   # end up at mismatched versions; only releases at least 14 days old are proposed.
   - package-ecosystem: github-actions
     directory: /
-    schedule: {interval: weekly}
+    schedule: {interval: monthly}
     cooldown: {default-days: 14}
     groups:
       github-actions:
@@ -12,14 +12,14 @@ updates:
 
   - package-ecosystem: terraform
     directory: /
-    schedule: {interval: weekly}
+    schedule: {interval: monthly}
     cooldown: {default-days: 14}
 
   # Minor and patch updates in one PR; major upgrades (React, Ant Design, Amplify) need a
   # real migration, so they're skipped here and done deliberately.
   - package-ecosystem: npm
     directory: /react-dashboard
-    schedule: {interval: weekly}
+    schedule: {interval: monthly}
     cooldown: {default-days: 14}
     ignore:
       - dependency-name: "*"
